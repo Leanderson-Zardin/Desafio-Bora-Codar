@@ -16,11 +16,36 @@
 
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--background-color);
+}
+
+main {
+  width: min(70rem, 90%);
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+  "first-card second-card"
+  "first-card third-card";
+  gap: 2rem;
+  width: 100%;
+}
+
+.first-card {
+  grid-area: first-card;
+}
+
+.second-card {
+  grid-area: second-card;
+}
+
+.third-card {
+  grid-area: third-card;
 }
 
 .card {
@@ -82,4 +107,30 @@ body {
 .card .time span {
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.534);;
+}
+
+.second-card,
+.third-card {
+  padding: 2.9rem;
+}
+
+.second-card .music,
+.third-card .music {
+  display: flex;
+  gap: 2.8rem;
+  align-items: center;
+}
+
+.second-card figure,
+.third-card figure {
+  width: 8.5rem;
+}
+
+.second-card .buttons,
+.third-card .buttons {
+  justify-content: space-evenly;
+}
+
+.third-card .buttons {
+  margin: 0;
 }
