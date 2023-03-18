@@ -134,3 +134,31 @@ main {
 .third-card .buttons {
   margin: 0;
 }
+
+@media (max-width: 730px) {
+  body {
+    height: 100%;
+    padding: 2rem 0rem;
+  }
+  
+  .card {
+    width: 40rem;
+    margin: 0 auto;
+  }
+
+  .container {
+    grid-template-areas:
+    "first-card"
+    "second-card"
+    "third-card";
+  }
+
+  .first-card figure {
+    margin: 0 auto 2.8rem;
+  }
+
+  .first-card h1,
+  .first-card p {
+    text-align: center;
+  }
+}
